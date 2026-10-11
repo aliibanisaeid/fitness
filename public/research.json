@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "id": "pubmed-42770473",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-10-01",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42770473/",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+      "evidence": "Randomized Controlled Trial, Journal Article",
+      "origin": "ai",
+      "originalTitle": "The Role of Eccentric Contraction Training in the Postoperative Rehabilitation of Patients With Total Knee Arthroplasty.",
+      "doi": "10.1002/pri.70312",
+      "pmid": "42770473",
+      "fa": {
+        "title": "تمرین اکسنتریک پس از تعویض کامل زانو",
+        "excerpt": "یک کارآزمایی تصادفی کوچک نشان داد افزودن تمرین اکسنتریک ممکن است برخی پیامدهای عملکردی را طی توان‌بخشی اولیه بهبود دهد.",
+        "body": "در این کارآزمایی، ۴۴ فردِ در آستانه جراحی اولیه تعویض کامل زانو به‌طور تصادفی در دو گروه قرار گرفتند. هر دو گروه هشت هفته، از یک هفته پس از جراحی، پنج جلسه در هفته تمرین‌های عملکردی دریافت کردند؛ گروه اکسنتریک‌ـ‌کانسنتریک علاوه بر آن تمرین اکسنتریک عضلات چهارسر با دستگاه ایزوکینتیک انجام داد. بر اساس چکیده، افزودن تمرین اکسنتریک با بهبود بیشتر نمره عملکردی KSS، نمره کل WOMAC و بازشدن فعال زانو همراه بود. روند کاهش درد بین گروه‌ها متفاوت بود و به نفع گروه اکسنتریک گزارش شد، اما میزان درد در پایان هفته هشتم مشابه بود. برتری در همه پیامدها گزارش نشد.",
+        "takeaways": [
+          "برخی پیامدهای عملکردی و بازشدن فعال زانو بیشتر بهبود یافتند.",
+          "در پایان هفته هشتم، درد دو گروه مشابه بود.",
+          "نتایج به برنامه و بازه زمانی بررسی‌شده محدودند."
+        ],
+        "limitations": "نمونه کوچک و پیگیری کوتاه‌مدت بود. چکیده مقادیر دقیق نتایج، اندازه اثر و جزئیات کامل آماری را ارائه نمی‌کند؛ بنابراین بزرگی و دقت تفاوت‌ها روشن نیست."
+      },
+      "en": {
+        "title": "Eccentric Training After Total Knee Replacement",
+        "excerpt": "A small randomized trial suggests that adding eccentric exercise may improve selected functional outcomes during early rehabilitation.",
+        "body": "In this trial, 44 people scheduled for primary total knee arthroplasty were randomly assigned to two groups. Both completed an eight-week program, starting one week after surgery, with five sessions weekly. The eccentric-concentric group also performed supervised eccentric quadriceps exercise on an isokinetic dynamometer; the comparison group did not. According to the abstract, adding eccentric training was associated with greater improvement in KSS functional score, total WOMAC score, and active knee extension. Pain reduction followed different trajectories, favoring the eccentric group, although pain levels were comparable between groups at week eight. The abstract does not report benefits across all outcomes.",
+        "takeaways": [
+          "Selected functional outcomes and active knee extension improved more with added eccentric training.",
+          "Pain levels were comparable at the end of week eight.",
+          "Findings apply to the tested program and short follow-up period."
+        ],
+        "limitations": "The sample was small and follow-up was short. The abstract provides no exact outcome values, effect sizes, or complete statistical results, limiting assessment of the magnitude and precision of differences."
+      }
+    },
+    {
       "id": "pubmed-42775508",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -141,7 +177,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-10-11T07:20:50.882Z",
+    "lastSuccess": "2026-10-11T08:56:28.244Z",
     "status": "published"
   }
 }
