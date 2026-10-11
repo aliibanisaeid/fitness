@@ -1,0 +1,47 @@
+import { apiUrl, assetUrl, staticSite } from './runtime';
+import { useEffect, useRef, useState } from 'react';
+import type { ReactNode } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { ArrowUpLeft, ArrowUpRight, Menu, X, Sparkles, Clock3 } from 'lucide-react';
+import { useLocale } from './locale';
+import type { Article, ArticleResponse, Course } from './content';
+
+export function DirectionArrow({ size = 18 }: { size?: number }) { return useLocale().isFa ? <ArrowUpLeft size={size} aria-hidden="true" /> : <ArrowUpRight size={size} aria-hidden="true" />; }
+export function Mark() { return <svg className="brand-mark" viewBox="0 0 52 52" aria-hidden="true"><rect width="52" height="52" rx="17" fill="currentColor"/><path d="M14 33c1-11 7-19 15-16 5 1 3 9-2 11-4 3-4 7 0 9 6 2 12-5 13-14" fill="none" stroke="#20231c" strokeWidth="5.6" strokeLinecap="round"/></svg>; }
+export function Brand() { const { t, path } = useLocale(); return <Link className="brand" to={path()} aria-label={t('حرکت؛ صفحهٔ اصلی', 'HARAKAT home')}><Mark/><span>{t('حرکت', 'HARAKAT')}<small>{t('برای زندگی در حرکت', 'LIFE IN MOTION')}</small></span></Link>; }
+export function Header() {
+  const { t, path, lang } = useLocale(); const location = useLocation(); const [open, setOpen] = useState(false);
+  useEffect(() => { setOpen(false); }, [location.pathname]);
+  useEffect(() => { if (!open) return; const fn = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); }; window.addEventListener('keydown', fn); return () => window.removeEventListener('keydown', fn); }, [open]);
+  const links = [['/programs', t('برنامهٔ آنلاین', 'Online programs')], ['/consultation', t('مشاورهٔ اختصاصی', 'Consultation')], ['/courses', t('دوره‌های آموزشی', 'Courses')], ['/journal', t('مجلهٔ حرکت', 'Journal')]];
+  const next = lang === 'fa' ? 'en' : 'fa';
+  return <header className="header"><div className="nav-shell"><Brand/><nav className={open ? 'main-nav open' : 'main-nav'} aria-label={t('منوی اصلی', 'Main navigation')}>{links.map(([url,title]) => <NavLink key={url} to={path(url)}>{title}</NavLink>)}</nav><div className="nav-actions"><Link className="language" to={`${location.pathname.replace(/^\/(fa|en)/, `/${next}`)}${location.search}${location.hash}`} lang={next} aria-label={t('Switch to English', 'تغییر زبان به فارسی')}>{t('EN', 'فا')}</Link><Link className="button small lime nav-cta" to={path('/start')}>{t('شروع مسیر من', 'Get started')}<DirectionArrow size={16}/></Link><button className="icon-button menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-label={t('باز و بسته کردن منو', 'Toggle navigation')}>{open ? <X/> : <Menu/>}</button></div></div></header>;
+}
+export function Footer() {
+  const { t, path } = useLocale();
+  return <footer className="footer"><div className="container footer-main"><div><Brand/><p>{t('علم، همراهی و حرکت؛ برای یک زندگی فعال‌تر', 'Science, support and movement. For a more active life.')}</p></div><div className="footer-links"><Link to={path('/programs')}>{t('برنامه‌ها', 'Programs')}</Link><Link to={path('/consultation')}>{t('مشاوره', 'Consultation')}</Link><Link to={path('/courses')}>{t('آموزش', 'Learn')}</Link><Link to={path('/journal')}>{t('مجله', 'Journal')}</Link><Link to={path('/privacy')}>{t('حریم خصوصی', 'Privacy')}</Link></div><div className="footer-note"><span className="tiny-label">{t('همراه مسیرت', 'WITH YOU, EVERY STEP')}</span><p>{t('از اولین قدم، تا بازگشت به چیزی که دوست داری', 'From the first step, back to what you love.')}</p></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} {t('حرکت', 'HARAKAT')}</span><span>{t('محتوای آموزشی، جایگزین ارزیابی و درمان فردی نیست', 'Educational content does not replace individual clinical care.')}</span></div></footer>;
+}
+export function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) { return <div className={`eyebrow ${light ? 'light' : ''}`}><span/>{children}</div>; }
+export function SectionHeading({ eyebrow, title, description, link, linkText }: { eyebrow: string; title: ReactNode; description?: string; link?: string; linkText?: string }) { return <div className="section-heading"><div><Eyebrow>{eyebrow}</Eyebrow><h2>{title}</h2>{description && <p>{description}</p>}</div>{link && <Link to={link} className="text-link">{linkText}<DirectionArrow/></Link>}</div>; }
+export function CourseCard({ course, decorative = false }: { course: Course; decorative?: boolean }) { const { text, path, t, num } = useLocale(); return <Link className={`course-card ${course.color}`} tabIndex={decorative ? -1 : undefined} to={path(`/courses/${course.id}`)}><div className="course-image"><img src={assetUrl(course.image)} loading="lazy" alt={text(course.name)}/><span className="course-label">{text(course.eyebrow)}</span><span className="round-arrow"><DirectionArrow size={21}/></span></div><div className="course-copy"><div className="card-meta"><span>{t('آموزش پایه', 'Foundation course')}</span><span>{num(course.lessons.length)} {t('درس', 'lessons')}</span></div><h3>{text(course.name)}</h3><p>{text(course.description)}</p></div></Link>; }
+export function ArticleCard({ article }: { article: Article }) { const { lang, path, t, date, num } = useLocale(); return <Link className="article-card" to={path(`/journal/${article.id}`)}><div className="article-image"><img src={assetUrl(article.image)} loading="lazy" alt=""/><span className="article-type">{article.origin === 'ai' ? <><Sparkles size={13}/>{t('خلاصه با AI', 'AI research brief')}</> : t('مرور پژوهش', 'Research brief')}</span></div><div className="article-meta"><span>{date(article.publishedAt)}</span><span><Clock3 size={12}/>{num(article.readMinutes)} {t('دقیقه مطالعه', 'min read')}</span></div><h3>{article[lang].title}</h3><p>{article[lang].excerpt}</p><span className="article-source">{article.journal}<DirectionArrow size={15}/></span></Link>; }
+export function useArticles() { const [data, setData] = useState<ArticleResponse | null>(null); const [error, setError] = useState(false); const [reload, setReload] = useState(0); useEffect(() => { const controller = new AbortController(); setError(false); fetch(staticSite ? assetUrl('/research.json') : apiUrl('articles'), { signal: controller.signal, cache: 'no-cache' }).then(r => { if (!r.ok) throw new Error('Failed'); return r.json(); }).then(setData).catch(e => { if (e.name !== 'AbortError') setError(true); }); return () => controller.abort(); }, [reload]); return { data, error, retry: () => setReload(v => v + 1) }; }
+export function ResearchState({ error, retry }: { error: boolean; retry: () => void }) { const { t } = useLocale(); return <div className="status-box" role="status">{error ? <><p>{t('دریافت مقاله‌ها با مشکل روبه‌رو شد', 'We could not load the journal.')}</p><button className="button outline" onClick={retry}>{t('تلاش دوباره', 'Try again')}</button></> : <p>{t('در حال دریافت پژوهش‌ها…', 'Loading research…')}</p>}</div>; }
+export function VideoModal({ onClose }: { onClose: () => void }) {
+  const { t } = useLocale(); const ref = useRef<HTMLDialogElement>(null);
+  useEffect(() => { const dialog = ref.current; dialog?.showModal(); return () => dialog?.close(); }, []);
+  return <dialog ref={ref} className="video-dialog" onCancel={onClose} onClick={e => { if (e.target === e.currentTarget) onClose(); }}><div className="video-dialog-top"><h2>{t('زندگی در حرکت', 'Life in motion')}</h2><button className="icon-button" onClick={onClose} aria-label={t('بستن ویدئو', 'Close video')}><X/></button></div><video src={assetUrl('/media/training.mp4')} poster={assetUrl('/media/training-poster.jpg')} aria-label={t('مرد در حال حرکت کششی؛ ویدئوی بدون گفتار', 'A man stretching; a film without speech')} controls autoPlay playsInline preload="metadata"/><p>{t('لحظه‌ای از حرکت · بدون گفتار', 'A moment of movement · No speech')} · <a href="https://coverr.co/videos/stretching-arms-krykrklfjv" target="_blank" rel="noopener noreferrer">Coverr</a></p></dialog>;
+}
+export function MotionVideo({ className = '', src = '/media/training.mp4', poster = '/media/training-poster.jpg', label }: { className?: string; src?: string; poster?: string; label?: string }) {
+  const { t } = useLocale(); const ref = useRef<HTMLVideoElement>(null); const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    const video = ref.current; if (!video) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let visible = false;
+    const sync = () => { if (visible && !document.hidden && !reduced.matches) video.play().catch(() => {}); else video.pause(); };
+    const observer = new IntersectionObserver(entries => { visible = entries[0].isIntersecting; sync(); }, { threshold: 0.15 });
+    observer.observe(video); reduced.addEventListener('change', sync); document.addEventListener('visibilitychange', sync);
+    return () => { observer.disconnect(); reduced.removeEventListener('change', sync); document.removeEventListener('visibilitychange', sync); video.pause(); };
+  }, [src]);
+  return <div className={`motion-video ${className}`}><video ref={ref} src={assetUrl(src)} poster={assetUrl(poster)} muted loop playsInline preload="metadata" onError={() => setFailed(true)} aria-label={label || t('ویدئوی ورزشی با حضور یک مرد', 'Fitness film featuring a male athlete')}/>{failed && <img src={assetUrl(poster)} alt={label || t('مرد در حال تمرین', 'Male athlete training')}/>}</div>;
+}

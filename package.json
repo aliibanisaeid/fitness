@@ -1,0 +1,36 @@
+{
+  "name": "harakat-fitness",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,green \"node --env-file-if-exists=.env --watch server/index.mjs\" \"vite --host 127.0.0.1\"",
+    "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build --mode pages && node scripts/pages-routes.mjs",
+    "research:export": "node --env-file-if-exists=.env scripts/export-research.mjs",
+    "research:weekly": "node scripts/weekly-research.mjs",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "articles:sync": "node --env-file-if-exists=.env scripts/sync-articles.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "lucide-react": "^0.468.0",
+    "node-cron": "^4.2.1",
+    "openai": "^6.0.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.9"
+  }
+}

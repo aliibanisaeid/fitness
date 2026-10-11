@@ -1,0 +1,34 @@
+import { assetUrl } from './runtime';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Activity, CalendarDays, Check, Dumbbell, Home } from 'lucide-react';
+import { areas } from './content';
+import type { Area } from './content';
+import { DirectionArrow, Mark, SectionHeading } from './components';
+import { useLocale } from './locale';
+
+export default function PlanShowcase() {
+  const { t, text, path, num, isFa } = useLocale();
+  const [step, setStep] = useState(0);
+  const [area, setArea] = useState<Area>('knee');
+  const [goal, setGoal] = useState('return');
+  const [equipment, setEquipment] = useState('home');
+  const [days, setDays] = useState(3);
+  const [minutes, setMinutes] = useState(20);
+  const selectedArea = areas.find(a => a.id === area)!;
+  const start = path(`/start?${new URLSearchParams({ area, goal, equipment, days: String(days), minutes: String(minutes) })}`);
+  const steps = [
+    { icon: Activity, title: t('از هدفت شروع کن', 'Start with your goal'), copy: t('بدنت و فعالیتی که دوست داری به آن برگردی، نقطهٔ شروع مسیر توست', 'Your body and the activities you want to return to are your starting point.') },
+    { icon: Home, title: t('با امکانات خودت', 'Make it fit your space'), copy: t('در خانه یا باشگاه؛ شرایط تمرینت را خودت مشخص کن', 'At home or in the gym. Tell us what your training space looks like.') },
+    { icon: CalendarDays, title: t('هماهنگ با زندگی تو', 'Find time that works'), copy: t('زمان در دسترس تو را می‌شناسیم؛ برنامهٔ فردی پس از ارزیابی آماده می‌شود', 'Share the time you have. Your individual plan follows an assessment.') },
+  ];
+  const goals = [['return', t('بازگشت به فعالیت', 'Return to activity')], ['strength', t('قدرت و عملکرد', 'Strength & function')], ['movement', t('حرکت راحت‌تر', 'Move with confidence')]];
+  const setups = [['home', t('خانه، بدون تجهیزات', 'Home, no equipment'), Home], ['basic', t('وسایل سادهٔ تمرین', 'Basic equipment'), Dumbbell], ['gym', t('باشگاه', 'Gym access'), Activity]] as const;
+  return <section className="container plan-showcase" aria-labelledby="plan-showcase-title">
+    <SectionHeading eyebrow={t('اول خودت، بعد برنامه', 'YOU FIRST. THEN YOUR PLAN')} title={<span id="plan-showcase-title">{t('با تو شروع می‌شود', 'It starts with you')}<br/><span className="muted-title">{t('با زندگی تو پیش می‌رود', 'It moves with your life')}</span></span>} />
+    <div className="plan-panel">
+      <div className="plan-story"><span className="pill subtle">{t('برنامهٔ آنلاین، به شیوهٔ تو', 'YOUR ONLINE PROGRAM')}</span><h3>{t('چند انتخاب ساده', 'A few simple choices')}<br/>{t('یک شروع شخصی', 'A personal beginning')}</h3><p>{t('هدف، امکانات و زمانت را انتخاب کن. همین انتخاب‌ها را در فرم دریافت برنامه ادامه می‌دهی.', 'Choose your goal, space and available time. Take those choices with you into your program request.')}</p><div className="plan-story-steps" aria-label={t('مراحل شناخت شرایط تو', 'Preview your program request')}>{steps.map((s,i) => <button key={i} aria-pressed={step === i} onClick={() => setStep(i)} className={step === i ? 'active' : ''}><span className="plan-story-icon"><s.icon size={20}/></span><span><strong>{s.title}</strong><small>{s.copy}</small></span></button>)}</div><Link className="text-link" to={start}>{t('با انتخاب‌هایم ادامه بدهم', 'Continue with my choices')}<DirectionArrow/></Link></div>
+      <figure className="phone-stage"><div className="phone-aura" aria-hidden="true"/><img className="phone-back" src={assetUrl('/media/iphone-18-pro-back.png')} loading="lazy" alt={t('پشت آیفون ۱۸ پرو به رنگ زرشکی', 'Burgundy iPhone 18 Pro rear view')}/><div className="phone-device"><span className="phone-side-buttons" aria-hidden="true"/><div className="phone-screen" dir={isFa ? 'rtl' : 'ltr'}><div className="phone-status" aria-hidden="true"><span className="phone-island"/></div><div className="phone-app-brand"><Mark/><strong>{t('برنامهٔ من', 'My program')}</strong><span dir="ltr">{num(step+1)} / {num(3)}</span></div><div className="phone-cover"><img src={assetUrl(selectedArea.image)} alt=""/><span>{text(selectedArea.name)}</span></div><div className="phone-progress" aria-hidden="true">{steps.map((_,i)=><span key={i} className={i <= step ? 'active' : ''}/>)}</div><div className="phone-step" key={step}><h4>{[t('از هدفت بگو', 'Tell us your goal'), t('کجا تمرین می‌کنی؟', 'Where will you move?'), t('وقت برای خودت', 'Make time for you')][step]}</h4>{step === 0 && <><label className="phone-field" htmlFor="phone-area">{t('ناحیهٔ بدن', 'Body area')}<select id="phone-area" aria-label={t('ناحیهٔ بدن', 'Body area')} value={area} onChange={e=>setArea(e.target.value as Area)}>{areas.map(a=><option key={a.id} value={a.id}>{text(a.name)}</option>)}</select></label><div className="phone-options" role="group" aria-label={t('هدف برنامهٔ نمونه', 'Your program goal')}>{goals.map(([id,label])=><button key={id} aria-pressed={goal === id} className={goal === id ? 'selected' : ''} onClick={()=>setGoal(id)}>{label}{goal === id && <Check size={14}/>}</button>)}</div></>}{step === 1 && <><p className="phone-step-note">{t('امکاناتت بخشی از انتخاب مسیر است', 'Your space helps shape your approach.')}</p><div className="phone-options setup-options" role="group" aria-label={t('امکانات برنامهٔ نمونه', 'Your training space')}>{setups.map(([id,label,Icon])=><button key={id} aria-pressed={equipment === id} className={equipment === id ? 'selected' : ''} onClick={()=>setEquipment(id)}><Icon size={16}/>{label}{equipment === id && <Check size={14}/>}</button>)}</div><span className="phone-soft-note">{t('از جایی که هستی شروع کن', 'Start where you are')}</span></>}{step === 2 && <><div className="phone-time-field"><span>{t('روزهای در دسترس در هفته', 'Available days per week')}</span><div role="group" aria-label={t('روزهای برنامهٔ نمونه', 'Available days')}>{[2,3,4].map(n=><button key={n} aria-pressed={days === n} onClick={()=>setDays(n)} className={days === n ? 'selected' : ''}>{num(n)} {t('روز', 'days')}</button>)}</div></div><div className="phone-time-field"><span>{t('زمان در دسترس هر جلسه', 'Available time per session')}</span><div role="group" aria-label={t('زمان برنامهٔ نمونه', 'Available time')}>{[15,20,30].map(n=><button key={n} aria-pressed={minutes === n} onClick={()=>setMinutes(n)} className={minutes === n ? 'selected' : ''}>{num(n)} {t('دقیقه', 'min')}</button>)}</div></div><p className="phone-step-note">{t('حجم تمرین پس از ارزیابی تعیین می‌شود', 'Training volume follows your assessment.')}</p></>}</div><div className="phone-app-bottom">{step < 2 ? <button className="phone-next" onClick={()=>setStep(s=>s+1)}>{t('قدم بعد', 'Next step')}<DirectionArrow size={15}/></button> : <Link className="phone-next" to={start}>{t('ادامهٔ درخواست من', 'Continue my request')}<DirectionArrow size={15}/></Link>}<span className="phone-home-line" aria-hidden="true"/></div></div></div></figure>
+    </div>
+  </section>;
+}
