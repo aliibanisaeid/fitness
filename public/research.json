@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "id": "pubmed-42603849",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-10-01",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42603849/",
+      "journal": "Physiotherapy research international : the journal for researchers and clinicians in physical therapy",
+      "evidence": "Comparative Study, research-article, Randomized Controlled Trial, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Foot-Targeted Rehabilitation for Pronation-Related Anterior Knee Pain: A Two-Phase Case-Control Study and Single-Blind Randomized Controlled Trial of Manual Therapy Versus Neuromuscular Training Each With Augmented Low-Dye Taping.",
+      "doi": "10.1002/pri.70318",
+      "pmid": "42603849",
+      "fa": {
+        "title": "وقتی ارزیابی پا به توان‌بخشی زانوی قدامی می‌پیوندد",
+        "excerpt": "یک مطالعه کوچک، ارتباط پرونیشن پا با عملکرد ضعیف‌تر زانو را گزارش کرد و دو برنامه متمرکز بر پا را با مراقبت معمول مقایسه کرد.",
+        "body": "این پژوهش دو مرحله داشت. در مرحله نخست، مطالعه موردـشاهدی آینده‌نگر ۵۰ فرد مبتلا به درد قدامی زانو را بر اساس وضعیت پا مقایسه کرد؛ عملکرد زانو در گروه دارای پرونیشن پایین‌تر بود، اما این طرح مقطعی رابطه علت‌ومعلولی را نشان نمی‌دهد. در مرحله دوم، ۳۱ شرکت‌کننده دارای پرونیشن به‌طور تصادفی در سه گروه قرار گرفتند: درمان دستی همراه با تیپینگ اصلاح‌شده لو-دای، تمرین عصبی‌عضلانی همراه با همان تیپینگ، یا فیزیوتراپی معمول. مداخلات طی ۱۲ جلسه در چهار هفته انجام شد. هر دو برنامه متمرکز بر پا در چهار پیامد ارزیابی‌شده از مراقبت معمول بهتر بودند؛ درمان دستی نیز نمایه بالینی قوی‌تری نشان داد. این نتایج مقدماتی‌اند.",
+        "takeaways": [
+          "پرونیشن پا با عملکرد ضعیف‌تر زانو همراه بود، نه اینکه علت آن ثابت شده باشد.",
+          "هر دو برنامه همراه با تیپینگ از مراقبت معمول بهتر گزارش شدند.",
+          "نقش مستقل تیپینگ مشخص نشد."
+        ],
+        "limitations": "مرحله نخست امکان استنباط علی ندارد. کارآزمایی تک‌مرکزی، تک‌سوکور و کوچک بود؛ بنابراین برآوردها نامطمئن‌اند و به تأیید در پژوهش‌های بزرگ‌تر و چندمرکزی نیاز دارند."
+      },
+      "en": {
+        "title": "A Foot-Focused Approach to Anterior Knee Pain",
+        "excerpt": "A small study found an association between foot pronation and poorer knee function, and compared two foot-focused programs with routine care.",
+        "body": "The study had two phases. First, a prospective case-control study compared 50 people with anterior knee pain by foot posture; knee function was lower in those with pronation, but this design cannot establish cause and effect. In phase two, 31 participants with pronation were randomized to manual therapy plus augmented low-Dye taping, neuromuscular training plus the same taping, or routine physiotherapy. Treatment comprised 12 sessions over four weeks. Both foot-focused programs outperformed routine care on all four assessed outcomes; manual therapy also showed a stronger clinical profile. These findings are preliminary.",
+        "takeaways": [
+          "Pronation was associated with poorer knee function, but causation was not established.",
+          "Both programs, each paired with taping, were reported to outperform routine care.",
+          "The independent contribution of taping remains unknown."
+        ],
+        "limitations": "The first phase cannot establish causality. The single-center, single-blind trial had a small sample, making estimates uncertain; larger multicenter studies are needed to confirm the findings."
+      }
+    },
+    {
       "id": "pubmed-42770473",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -177,7 +213,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-10-11T08:56:28.244Z",
+    "lastSuccess": "2026-10-17T09:34:11.014Z",
     "status": "published"
   }
 }
