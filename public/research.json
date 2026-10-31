@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "id": "pubmed-42946338",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-10-27",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42946338/",
+      "journal": "BMJ (Clinical research ed.)",
+      "evidence": "Comparative Study, Equivalence Trial, Multicenter Study, Randomized Controlled Trial, Pragmatic Clinical Trial, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Comparative effectiveness of three splints for rehabilitation after finger flexor tendon repair (FIRST): randomised controlled trial.",
+      "doi": "10.1136/bmj-2026-100953",
+      "pmid": "42946338",
+      "fa": {
+        "title": "سه آتل، نتایجی مشابه در کارآزمایی",
+        "excerpt": "در یک کارآزمایی بریتانیایی، تفاوت آماری معناداری میان سه نوع آتل از نظر پیامدهای دست و مچ پس از ترمیم تاندون خم‌کننده انگشت دیده نشد.",
+        "body": "در این کارآزمایی تصادفی و عمل‌گرا در ۲۶ بیمارستان بریتانیا، ۴۳۰ فرد ۱۶ساله یا بزرگ‌تر پس از ترمیم اولیه تاندون خم‌کننده ناحیه ۱ یا ۲ در یک یا دو انگشت، به آتل بلند، کوتاه یا مینی تخصیص یافتند. آتل‌ها پنج هفته پیوسته و سپس یک هفته به‌صورت متناوب استفاده شدند. در تحلیل قصد درمان شامل ۴۰۳ نفر، میانگین نمره گزارش‌شده از سوی بیمار برای مچ و دست در سه گروه مشابه بود و هیچ‌یک از تفاوت‌های دوتایی از نظر آماری معنادار نبود. عوارض جدی در ۱۰ تا ۱۱ درصد هر گروه رخ داد.",
+        "takeaways": [
+          "سه آتل در یک کارآزمایی تصادفی چندمرکزی مقایسه شدند.",
+          "پیامدهای گزارش‌شده از سوی بیمار و میزان عوارض جدی در گروه‌ها به‌طور کلی مشابه بود.",
+          "نتایج، هم‌ارزی را اثبات نمی‌کنند و لزوماً به جمعیت‌های دیگر قابل تعمیم نیستند."
+        ],
+        "limitations": "به‌دلیل ماهیت مداخله، شرکت‌کنندگان از نوع آتل بی‌خبر نبودند و ۲۷ فرد تخصیص‌یافته در تحلیل قصد درمان وارد نشدند. نبود تفاوت معنادار، هم‌ارزی آتل‌ها را ثابت نمی‌کند؛ نتایج به جمعیت و ترمیم‌های بررسی‌شده محدود است."
+      },
+      "en": {
+        "title": "Three splints, similar trial results",
+        "excerpt": "A UK trial found no statistically significant difference in hand and wrist outcomes among three splint types after finger flexor tendon repair.",
+        "body": "In this pragmatic randomised trial across 26 UK hospitals, 430 people aged 16 or older undergoing primary repair of zone 1 or 2 flexor tendons in one or two fingers were assigned to a long, short, or mini splint. Splints were worn continuously for five weeks, then intermittently for one week. Among 403 participants in the intention-to-treat analysis, average patient-rated wrist and hand scores were similar across groups. None of the pairwise differences was statistically significant. Serious adverse events occurred in 10–11% of participants in each group.",
+        "takeaways": [
+          "The trial compared three splints in a randomised, multicentre design.",
+          "Patient-rated outcomes and serious adverse event rates were broadly similar across groups.",
+          "The results do not prove equivalence or necessarily apply beyond the studied population."
+        ],
+        "limitations": "Participants could not be masked, and 27 randomised participants were not included in the intention-to-treat analysis. No statistically significant difference does not establish that the splints are equivalent; findings apply to the studied repairs and population."
+      }
+    },
+    {
       "id": "pubmed-42603849",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -213,7 +249,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-10-17T09:34:11.014Z",
+    "lastSuccess": "2026-10-31T11:02:07.433Z",
     "status": "published"
   }
 }
