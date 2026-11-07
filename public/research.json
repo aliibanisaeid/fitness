@@ -1,6 +1,40 @@
 {
   "articles": [
     {
+      "id": "pubmed-42548132",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-11-01",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/42548132/",
+      "journal": "Pain medicine (Malden, Mass.)",
+      "evidence": "Equivalence Trial, Randomized Controlled Trial, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Intravenous lidocaine does not provide additional pain reduction beyond placebo in probable nociplastic chronic low back pain: a randomized controlled equivalence trial.",
+      "doi": "10.1093/pm/pnag093",
+      "pmid": "42548132",
+      "fa": {
+        "title": "لیدوکائین و کمردرد مزمن: نبودِ فایدهٔ افزوده",
+        "excerpt": "در یک کارآزمایی هم‌ارزی، تزریق وریدی لیدوکائین در کنار درمان‌های پایه، کاهش درد بیشتری از دارونما ایجاد نکرد.",
+        "body": "این کارآزمایی تصادفی‌شده ۸۴ بزرگسال مبتلا به کمردرد مزمنِ غیراختصاصی با ویژگی‌های درد احتمالاً نوسی‌پلاستیک را بررسی کرد. شرکت‌کنندگان به‌طور مساوی لیدوکائین وریدی یا محلول نمکی دریافت کردند؛ هر دو گروه همچنین آمی‌تریپتیلین و ورزش هوازی داشتند. پس از سه ماه، تفاوت بین گروه‌ها در شدت درد ۰٫۲۴ واحد بود و فاصلهٔ اطمینان ۹۰٪ آن (۰٫۳۳- تا ۰٫۸۱) کاملاً در محدودهٔ هم‌ارزیِ ازپیش‌تعیین‌شدهٔ ±۱٫۵ قرار داشت. بنابراین، در این مطالعه لیدوکائین فایدهٔ افزوده‌ای نسبت به دارونما نشان نداد.",
+        "takeaways": [
+          "نتیجه به تزریق هفتگی لیدوکائین طی چهار هفته در همین جمعیت مربوط است.",
+          "هر دو گروه درمان پایهٔ مشابهی شامل آمی‌تریپتیلین و ورزش دریافت کردند."
+        ],
+        "limitations": "چکیده فقط یک مرکز و پیگیری سه‌ماهه را گزارش می‌کند؛ جزئیات ریزش شرکت‌کنندگان، کورسازی و نتایج پیامدهای خواب و ناتوانی را ارائه نمی‌دهد. این نتیجه را نمی‌توان به همهٔ انواع کمردرد یا دوره‌های طولانی‌تر تعمیم داد."
+      },
+      "en": {
+        "title": "Lidocaine adds no pain relief in this trial",
+        "excerpt": "In a randomized equivalence trial, intravenous lidocaine did not reduce pain more than placebo when added to background care.",
+        "body": "The trial included 84 adults with chronic nonspecific low back pain and probable nociplastic features. Participants were randomized equally to intravenous lidocaine or saline; both groups also received amitriptyline and aerobic exercise. At three months, the between-group pain difference was 0.24 VAS units, with a 90% confidence interval from -0.33 to 0.81, entirely within the prespecified equivalence range of ±1.5. Thus, lidocaine showed no additional pain benefit over placebo in this study.",
+        "takeaways": [
+          "The finding concerns weekly lidocaine infusions for four weeks in this specific population.",
+          "Both groups received the same background multimodal care."
+        ],
+        "limitations": "The abstract reports one center and three-month follow-up, but does not provide details on attrition, blinding, or results for sleep and disability outcomes. Findings should not be generalized to all low back pain or longer-term treatment."
+      }
+    },
+    {
       "id": "pubmed-42946338",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -249,7 +283,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-10-31T11:02:07.433Z",
+    "lastSuccess": "2026-11-07T11:51:12.030Z",
     "status": "published"
   }
 }
