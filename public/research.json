@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "id": "pubmed-43024366",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-11-13",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43024366/",
+      "journal": "Journal of medical Internet research",
+      "evidence": "IM, Systematic Review, Review, Network Meta-Analysis, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Effectiveness of Digital Health Interventions on Rehabilitation Outcomes in Patients After Total Knee Arthroplasty: Systematic Review and Network Meta-Analysis.",
+      "doi": "10.2196/101277",
+      "pmid": "43024366",
+      "fa": {
+        "title": "توان‌بخشی دیجیتال پس از تعویض زانو: نتایج امیدوارکننده، اما نه قطعی",
+        "excerpt": "مرور ۳۶ کارآزمایی نشان داد برخی روش‌های دیجیتال ممکن است به بهبود حرکت و عملکرد زانو پس از جراحی کمک کنند.",
+        "body": "این مرور نظام‌مند و فراتحلیل شبکه‌ای، ۳۶ کارآزمایی تصادفی‌سازی‌شده با ۳۰۶۷ بیمار پس از تعویض کامل زانو را بررسی کرد. در مقایسه با توان‌بخشی متعارف، ربات توان‌بخشی، تله‌درمانی مبتنی بر اپلیکیشن و واقعیت مجازی در برخی سنجه‌های خم‌شدن فعال زانو نتایج بهتری داشتند؛ واقعیت مجازی، سامانه هوشمند تله‌درمانی و ربات نیز در امتیاز زانو برتری‌هایی نشان دادند. برای درد، هرچند ربات و اپلیکیشن رتبه‌های نسبتاً بالایی داشتند، بیشتر بازه‌های اطمینان شامل نبود تفاوت بودند. قطعیت شواهد برای بیشتر مقایسه‌ها پایین یا بسیار پایین بود.",
+        "takeaways": [
+          "برخی مداخلات دیجیتال در دامنه خم‌شدن و امتیاز عملکرد زانو از توان‌بخشی متعارف بهتر بودند.",
+          "رتبه‌های مطلوب ربات، واقعیت مجازی و اپلیکیشن، اثبات برتری قطعی آن‌ها نیست.",
+          "نتایج مربوط به درد و برخی سنجه‌های دیگر نامطمئن بود."
+        ],
+        "limitations": "شبکه عمدتاً ستاره‌ای بود و رتبه‌بندی‌ها تا حد زیادی بر مقایسه‌های غیرمستقیم تکیه داشتند؛ قطعیت بیشتر شواهد پایین یا بسیار پایین بود. برای نتیجه‌گیری مطمئن‌تر، کارآزمایی‌های باکیفیت و مقایسه‌های مستقیم لازم است."
+      },
+      "en": {
+        "title": "Digital Rehab After Knee Replacement: Promising, Not Definitive",
+        "excerpt": "A review of 36 trials found that some digital approaches may improve knee movement and function after surgery.",
+        "body": "This systematic review and network meta-analysis included 36 randomized controlled trials with 3,067 patients after total knee arthroplasty. Compared with conventional rehabilitation, rehabilitation robots, app-based telerehabilitation, and virtual reality showed better results on some measures of active knee flexion; virtual reality, an intelligent telerehabilitation system, and robots also showed advantages on a knee score. Robots and app-based telerehabilitation ranked relatively highly for pain, but most confidence intervals included no difference. Certainty of evidence was low or very low for most comparisons.",
+        "takeaways": [
+          "Some digital interventions performed better than conventional rehabilitation on measures of knee flexion or function.",
+          "Favorable rankings for robots, virtual reality, and apps do not establish definitive superiority.",
+          "Findings for pain and some other measures remain uncertain."
+        ],
+        "limitations": "The network was predominantly star-shaped, and rankings relied largely on indirect comparisons. Evidence certainty was low or very low for most comparisons. Higher-quality studies with direct head-to-head comparisons are needed."
+      }
+    },
+    {
       "id": "pubmed-42548132",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -283,7 +319,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-11-07T11:51:12.030Z",
+    "lastSuccess": "2026-11-14T12:23:36.465Z",
     "status": "published"
   }
 }
