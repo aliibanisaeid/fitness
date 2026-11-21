@@ -1,6 +1,40 @@
 {
   "articles": [
     {
+      "id": "pubmed-43064868",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-11-21",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43064868/",
+      "journal": "Current oncology reports",
+      "evidence": "IM, Systematic Review, Review, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Rehabilitation Strategies for Upper Limb Function After Breast Cancer Treatment, with and Without Lymphedema: The Potential of Proprioceptive Neuromuscular Facilitation - A Systematic Review.",
+      "doi": "10.1007/s11912-026-01867-3",
+      "pmid": "43064868",
+      "fa": {
+        "title": "PNF پس از درمان سرطان پستان؛ امید و ابهام",
+        "excerpt": "مرور شش کارآزمایی، شواهدی محدود دربارهٔ نقش تسهیل عصبی‌عضلانی حس عمقی در عملکرد اندام فوقانی یافت.",
+        "body": "این مرور نظام‌مند، شش کارآزمایی تصادفی یا شبه‌تصادفی را با مجموع ۳۶۶ زنِ درمان‌شده برای سرطان پستان بررسی کرد؛ نیمی لنف‌ادم مرتبط با سرطان پستان داشتند و نیمی نداشتند. در مطالعات لنف‌ادم، حجم اندام در همهٔ گروه‌ها کاهش یافت، اما برتری پایدار PNF نسبت به مقایسه‌گرهای فعال دیده نشد. در زنان بدون لنف‌ادم، هر یک از مطالعات جداگانه بهبودهایی در دامنهٔ حرکت، قدرت یا عملکرد گزارش کردند. PNF غالباً بخشی از برنامه‌های چندوجهی بود.",
+        "takeaways": [
+          "PNF ممکن است جزئی از توان‌بخشی چندوجهی باشد؛ اثر مستقل آن روشن نیست.",
+          "در لنف‌ادم، PNF جایگزین درمان‌های کاهندهٔ ورم نیست."
+        ],
+        "limitations": "شواهد اطمینان پایین یا بسیار پایین داشت؛ خطر سوگیری در چهار مطالعه «نگرانی‌هایی» داشت و فقط یک مطالعه خطر سوگیری پایین داشت. تعداد کارآزمایی‌ها اندک بود و پروتکل‌ها یکسان نبودند؛ بنابراین نتیجه‌گیری دربارهٔ اثربخشی قطعی ممکن نیست."
+      },
+      "en": {
+        "title": "PNF After Breast Cancer Treatment: Promise and Uncertainty",
+        "excerpt": "A review of six trials found limited evidence on proprioceptive neuromuscular facilitation for upper-limb function.",
+        "body": "This systematic review included six randomized or quasi-randomized trials involving 366 women treated for breast cancer: three trials enrolled women with breast cancer-related lymphedema (BCRL) and three enrolled women without it. In BCRL studies, limb volume decreased across groups, but PNF showed no consistent advantage over active comparators. Individual trials in women without BCRL reported improvements in range of motion, strength, or function. PNF was usually delivered as part of multimodal rehabilitation.",
+        "takeaways": [
+          "PNF may be a component of multimodal rehabilitation, but its independent effect is unclear.",
+          "For women with BCRL, PNF should not replace decongestive treatment."
+        ],
+        "limitations": "Certainty was low or very low. Four trials raised some risk-of-bias concerns, one had high risk, and only one had low risk. The evidence comes from just six trials, and standardized PNF protocols are needed; firm conclusions about effectiveness cannot be drawn."
+      }
+    },
+    {
       "id": "pubmed-43024366",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -319,7 +353,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-11-14T12:23:36.465Z",
+    "lastSuccess": "2026-11-21T13:38:13.497Z",
     "status": "published"
   }
 }
