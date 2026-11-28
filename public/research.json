@@ -1,6 +1,42 @@
 {
   "articles": [
     {
+      "id": "pubmed-43101480",
+      "category": "research",
+      "image": "/media/mobility.jpg",
+      "publishedAt": "2026-11-23",
+      "readMinutes": 3,
+      "sourceUrl": "https://pubmed.ncbi.nlm.nih.gov/43101480/",
+      "journal": "PeerJ",
+      "evidence": "Meta-Analysis, research-article, Systematic Review, Journal Article",
+      "origin": "ai",
+      "originalTitle": "Systematic review and meta-analysis of human patella sexual dimorphism.",
+      "doi": "10.7717/peerj.21910",
+      "pmid": "43101480",
+      "fa": {
+        "title": "تفاوت‌های جنسی در ابعاد کشکک",
+        "excerpt": "مرور ۲۴ مطالعه نشان داد ابعاد اندازه‌گیری‌شدهٔ کشکک در مردان بزرگ‌تر بود، اما تفاوت میان مطالعات چشمگیر بود.",
+        "body": "این مرور نظام‌مند و فراتحلیل، داده‌های ۳٬۴۳۸ بزرگسال سالم را از ۲۴ مطالعه گردآوری کرد؛ اندازه‌گیری‌ها با تصویربرداری یا کولیس انجام شده بودند. میانگین ارتفاع، ضخامت و پهنای کشکک در مردان حدود ۱۲٪ بیشتر گزارش شد. زاویه نیز اندکی بیشتر و تیلت کشکک به‌طور میانگین کمتر بود. این یافته‌ها تفاوت‌های اندازه‌گیری‌شده را در نمونه‌های بررسی‌شده توصیف می‌کنند و به‌تنهایی درباره پیامدهای بالینی یا برتری یک روش توان‌بخشی چیزی نشان نمی‌دهند.",
+        "takeaways": [
+          "در مطالعات واردشده، مردان در همهٔ ابعاد گزارش‌شدهٔ کشکک مقادیر بزرگ‌تری داشتند.",
+          "میانگین تیلت کشکک در مردان کمتر گزارش شد.",
+          "تفاوت‌های اندازه‌گیری‌شده ممکن است در ارزیابی شکل کشکک اهمیت داشته باشند."
+        ],
+        "limitations": "ناهمگنی میان مطالعات برای بیشتر اندازه‌گیری‌ها زیاد بود و با دسته‌بندی بر اساس روش، محل، سمت و دورهٔ مطالعه نیز برطرف نشد. تفاوت روش‌ها و جمعیت‌ها مقایسه را محدود می‌کند؛ چکیده شواهدی ارائه نمی‌دهد که این تفاوت‌های آناتومیک پیامدهای درمانی یا توان‌بخشی را تغییر می‌دهند."
+      },
+      "en": {
+        "title": "Sex Differences in Patellar Dimensions",
+        "excerpt": "A review of 24 studies found larger measured patellar dimensions in males, alongside substantial variation across studies.",
+        "body": "This systematic review and meta-analysis pooled data from 3,438 healthy adults across 24 studies. Measurements were obtained through imaging or callipers. Average patellar height, thickness, and width were about 12% greater in males. Patellar angle was also slightly greater, while average tilt was lower. These findings describe measured differences in the included samples; they do not establish clinical effects or show that one rehabilitation approach is preferable.",
+        "takeaways": [
+          "Males had larger values across all reported patellar dimensions in the included studies.",
+          "Average patellar tilt was lower in males.",
+          "The findings may be relevant when describing patellar morphology."
+        ],
+        "limitations": "Heterogeneity was high for most measurements and remained after analyses by measurement method, location, side, and study era. Differences in methods and populations limit comparisons. The abstract does not show whether these anatomical differences affect treatment or rehabilitation outcomes."
+      }
+    },
+    {
       "id": "pubmed-43064868",
       "category": "research",
       "image": "/media/mobility.jpg",
@@ -353,7 +389,7 @@
     "configured": true,
     "schedule": "0 9 * * 6",
     "timezone": "Asia/Tehran",
-    "lastSuccess": "2026-11-21T13:38:13.497Z",
+    "lastSuccess": "2026-11-28T14:25:37.891Z",
     "status": "published"
   }
 }
